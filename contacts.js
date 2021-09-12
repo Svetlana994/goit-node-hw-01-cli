@@ -5,14 +5,6 @@ const { nanoid } = require("nanoid");
 const contactsPath = path.resolve("./db/contacts.json");
 
 async function listContacts() {
-  // const qwe = await fs.readFile(
-  //   "/db/contacts.json",
-  //   "utf8",
-  //   function (error, data) {
-  //     if (error) throw error; // если возникла ошибка
-  //     return JSON.parse(data); // выводим считанные данные
-  //   }
-  // );
   try {
     const data = await fs.readFile(contactsPath);
     return JSON.parse(data);
